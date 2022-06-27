@@ -28,16 +28,30 @@
 
 	<script type="text/javascript">
 	
-	//$("[name=name2]").css("color", "red");
-	
-	// 객체조작 - .val() .val(“값”)
-	// : 주로 form 엘리먼트에서 사용되며
-	// : form 태그의 value값을 읽어오거나, value값을 입력하는데 사용
-	
-	$("[name='name']").val("구웅");
-	$("[name='password']").val("1234");
-	$("[name='content']").val("유미의세포들 시즌1 남자주인공");
-	
+		//$("[name=name2]").css("color", "red");
+		
+		// 객체조작 - .val() .val(“값”)
+		// : 주로 form 엘리먼트에서 사용되며 value 값을 의미
+		// : form 태그의 value값을 읽어오거나, value값을 입력하는데 사용
+		
+		$("[name='name']").val("구웅");
+		$("[name='password']").val("1234");
+		$("[name='content']").val("유미의세포들 시즌1 남자주인공");
+		
+		// 아래의 value값을 읽어 console에 출력해 보세요
+		var name = $("[name='name']").val();
+		console.log(name);
+		
+		var password = $("[name='password']").val();
+		console.log(password);
+		
+		var content = $("[name='content']").val();
+		console.log(content);
+		
+		if(name == ''){
+			alert("이름을 입력하세요")
+		}
+		
 	</script>
 
 </html>
