@@ -2,17 +2,38 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	<div>
-		<input id="btn" type="button" VALUE="js테스트버튼" />
-		<h1 id="display">이름출력영역</h1>
+		
+		<button id ="btn" type="submit">js 테스트 버튼</button>
+		
+		<h3 id="display">이름 출력 영역</h3>
+		
 	</div>
 
 </body>
 
+	<script type="text/javascript">
+	
+		// 이벤트 - click : 마우스가 클릭 되었을때
+		$("#btn").on("click", function(){
+			/* 셀렉터로 지정한 태그가 클릭되었을 때 실행하는 처리 */
+			//$("#display").text("유바비");
+			//$("#display").css("color", "blue");
+			
+			//$("#display").text("<font color='red'>유바비</font>");
+			$("#display").html("<font color='red'>유바비</font>");
+		})
+		
+		// 이벤트 - mouseleave : 마우스가 떠났을 때 
+		$("#btn").on("mouseleave", function(){
 
+			$("#display").html("<font color='green'>유바비</font>");
+		})
+		
+	</script>
 
 </html>
