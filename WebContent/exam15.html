@@ -36,6 +36,18 @@
 		});		
 		
 		// 3)여섯번째 요소 클릭시 텍스트를 콘솔창에 출력해 보세요
+		// : jquery로 추가한 li 태그는 클릭 이벤트가잡히지 않음
+		// ㄴ 선택자를 li가 아닌 그 부모인 ul로 잡기
+		// ㄴ 하지만 ul로 선택자 잡으면 ul을 통으로 인식
+		// ㄴ 그래서 on() 안에 자식 태그 넣어야함 
+		$("ul").on("click", "li", function(){
+			//console.log(" ul > li 클릭 ")
+			var $this = $(this);
+			var str = $this.text();
+			console.log(str);
+		});
+		
+		
 		
 		
 		// 모든 <li>요소에 hover 이벤트를 설정
@@ -49,12 +61,12 @@
 		var color_old;
 		
 		$(document).ready(function() {
-			  $("li").on("mouseover", function(event){
+			  $("ul").on("mouseover", "li", function(event){
 			    color_old = $(this).css('background-color');
 			    $(this).css("background-color", "#BBBBFF");
 			  });
 			  
-			  $("li").on("mouseout",  function(event){
+			  $("ul").on("mouseout", "li",  function(event){
 			    $(this).css("background-color", color_old);
 			  });
 		});
