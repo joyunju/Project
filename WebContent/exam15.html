@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -13,9 +13,53 @@
 		<li id="third" class="del">세번째아이템입니다.</li>
 		<li><strong>네번째 아이템입니다.</strong></li>
 		
+		
 	</ul>
 	<input id="btn" type="button" VALUE="li요소추가" />
 </body>
+	
+	<script type="text/javascript">
+	
+		//1) 버튼을 클릭하여 li 요소를 추가해 보세요
+		$("#btn").on("click", function(){
+			//console.log("버튼 클릭");
+			$("ul").append("<li>다섯번째 아이템입니다.</li>");
+			$("ul").append("<li>여섯번째 아이템입니다.</li>");
+			$("ul").append("<li>일곱번째 아이템입니다.</li>");
+			
+		});
+		
+		//2) 세번째 요소 클릭시 텍스트를 콘솔창에 출력해 보세요
+		$("#third").on("click", function(){
+			var third = $("#third");
+			console.log(third);
+		});		
+		
+		// 3)여섯번째 요소 클릭시 텍스트를 콘솔창에 출력해 보세요
+		
+		
+		// 모든 <li>요소에 hover 이벤트를 설정
+		$("li").hover(function() { 
+			$("li").css('cursor', 'pointer');
+			//$(#this).css("background","#BBBBFF");
+			//한줄로 구현 가능하지만느림 -> mouseover 와 mouseout 이벤트로 변경 
+	    });
+		
+		// mouseover 와 mouseout
+		var color_old;
+		
+		$(document).ready(function() {
+			  $("li").on("mouseover", function(event){
+			    color_old = $(this).css('background-color');
+			    $(this).css("background-color", "#BBBBFF");
+			  });
+			  
+			  $("li").on("mouseout",  function(event){
+			    $(this).css("background-color", color_old);
+			  });
+		});
 
+		
+	</script>
 
 </html>
