@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -17,6 +17,73 @@
 
 </body>
 
+	<script type="text/javascript">
+	
+		// on() : 이벤트로 클릭시 text() 콘솔에 불러오는 이벤트 
+		/*
+		$("#first").on("click", function(){
+			//console.log("첫번째 클릭");
+			//$("#first").css('cursor', 'pointer');
+			
+			var str = $("#first").text();
+			console.log(str);
+			
+		});
+		
+		$("#second").on("click", function(){
+			//console.log("두번째 클릭");
+			var str = $("#second").text();
+			console.log(str);
+			
+		});
+		*/
+		
+		// 위의 처럼 하나하나 다 작성할 수 없으니 $(this)를 사용
+		// 객체조작 - $(this)
+		// : 현재 클릭(선택)한 엘리먼트
+		
+		/*
+		$("li").on("click", function(){
+			var $this = $(this);
+			//var 변수명 = $(this);
+			console.log($this);
+		});
+		*/
+		
+		
+		$("li").on("click", function(){
+			
+			//$(this) 중요!!			
+			var $this = $(this);
+			
+			// text 구하기 
+			var str = $this.text();
+			console.log(str);
+			
+			//.attr()은 요소(element)의 속성(attribute)의 값을 가져오거나 속성을 추가합니다.
+			// class의 이름 구하기 
+			var cName = $(this).attr("class");
+			console.log(cName);
+			
+			// id의 이름 구하기 
+			var idName = $(this).attr("id");
+			console.log(idName);
+			
+			// .attr( attributeName, value )
+			// .attr( 속성이름 , 속성값 )
+			var addClass = $(this).attr( "class" , "fourth" );
+			console.log(addClass);
+		});
+		
+	
+		// 모든 <li>요소에 hover 이벤트를 설정
+		$("li").hover(function() { 
+			$("li").css('cursor', 'pointer');
+       		//$("#text").append("마우스가 버튼 위로 진입하거나 빠져나갔어요!<br>");
+	    });	
+		
+	</script>
+	
 
 
 </html>
