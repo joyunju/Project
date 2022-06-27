@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
+</head>
+<body>
+	<h1>jquery 연습</h1>
+	
+	<h2>제이쿼리 연습 페이지입니다</h2>
+	
+	<div>
+		<button type="button">버튼</button>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+// DOM이 생성된 직 후, 작동 한다
+// alert(); 
+$(document).ready(function(){
+	alert("ready"); 
+});
+
+// 모든 요소들이 로드가 완료되면 메소드가 실행
+$(window).load(function(){
+	alert("load");
+});
+
+
+/*
+var act = function(){
+	console.log("load");
+};
+
+$(window).load(act);
+*/
+
+/* 
+$(window).load(function(){
+	console.log("load");
+});
+*/
+
+
+
+
+
+
+</script>
+
+</html>
