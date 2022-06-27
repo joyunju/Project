@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -11,6 +11,19 @@
 	<p id="p1">마바사아자차카타파하</p>
 	<p id="p2">마바사아자차카타파하</p>
 </body>
+
+	<script type="text/javascript">
+		
+		// 객체조작 - .prepend(html문자열)
+		// : 지정한 태그안의 내용 앞에 html문자열을 추가한다.
+		$("#p1").prepend("<em><mark>가나다라</mark></em><br>");
+		
+		
+		// 객체조작 - .append(html문자열)
+		// : 지정한 태그안의 내용 뒤에 html문자열을 추가한다.
+		$("#p2").append("<strong>abcdefg</strong>");
+		
+	</script>
 	
 
 </html>
