@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -19,5 +19,16 @@
 
 </body>
 	
+	<script type="text/javascript">
+		
+		// 객체조작 - .empty()
+		// : 선택자로 지정된 태그의 하위의 텍스트와 태그들을 제거한다.
+		// : 선택된 태그는 삭제되지 않음
+		
+		// 클래스 del이라는 이름을 가진 li를 삭제해보세요
+		$(".del").empty();
+		//.remove()는 다 지워지고, empty()는 태그 안쪽에 있는 글자만 없어져서 자리는 그대로 남아 있음 
+		
+	</script>
 
 </html>
