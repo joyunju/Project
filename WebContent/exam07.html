@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -11,6 +11,28 @@
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡<br /> abcdefg </p>
 </body>
+
+	<script type="text/javascript">
+		
+		// 객체조작 - .html(html문자열)
+		// : 파라미터로 html 문자열을 넘기면 태그가 반영된다.
+		// : 파라미터가 없으면 태그에 포함된 html을 가져온다.
+		
+		//1) p1태그의 내용을 "<strong>가나다라마바사아자차카타라하</strong>“ 로 변경해 보세요
+		$("#p1").html("<strong>가나다라마바사아자차카타라하</strong>");
+		
+		//2) p2태그의 내용을 text()를 이용하여 "<strong>가나다라마바사아자차카타라하</strong>" 로 변경하기
+		
+		
+		//3) p1태그의 html을 값을 가져와 console에 찍어보세요
+		var str1 = $("#p1").html();
+		console.log(str1);
+		
+		//4) p2태그의 내용을 text() 를 이용하여 가져와 console에 찍어보세요
+		var str2 = $("#p2").text();
+		console.log(str2);
+		
+	</script>
 	
 
 </html>
