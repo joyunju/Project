@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -12,5 +12,18 @@
 	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
 </body>
 	
-
+	<script type="text/javascript">
+		
+		//객체조작 - .text(문자열)
+		//$("선택자").text("바꾸고 싶은 텍스트 ")
+		// 1) p1태그의 텍스트를 “가나다라마바사” 로 변경해 보세요
+		$("#p1").text("가나다라마바사");
+		
+		//객체조작 - .text()
+		// : text() 안에 값이 없으면 텍스트를 가져온다는 의미
+		// 2) p2태그의 텍스트값을 가져와 console에 찍어보세요
+		console.log($("#p2").text());
+		
+	</script>
+	
 </html>
